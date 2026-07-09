@@ -30,6 +30,9 @@ if [ -z "$SESSION" ]; then
 fi
 [ -n "$SESSION" ] || { echo "!! Пустая строка-сессия"; exit 1; }
 
+# Папка-«allowed root» должна существовать, иначе сервер не стартует
+mkdir -p "$TARGET/telegram-data"
+
 echo "==> Удаляю прежнюю регистрацию (если была)..."
 claude mcp remove telegram-mcp --scope user >/dev/null 2>&1 || true
 

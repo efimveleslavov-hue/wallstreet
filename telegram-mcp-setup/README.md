@@ -88,6 +88,7 @@ MCP-серверы подхватываются при старте — **отк
 | Симптом | Что делать |
 |---|---|
 | `telegram-mcp` не Connected | Проверь путь бинаря `~/telegram-mcp/.venv/bin/telegram-mcp` и что `pip install -e .` прошёл без ошибок. |
+| `Allowed root does not exist: telegram-data` | Создай папку: `mkdir -p ~/telegram-mcp/telegram-data` (скрипт `02` теперь делает это сам). |
 | Ошибка кода / «session expired» | Повтори Шаг 3 — сгенерируй строку-сессию заново, потом Шаг 4. |
 | SSL-ошибка на macOS | `export SSL_CERT_FILE=$(python -m certifi)` перед запуском. |
 | Инструмент не появился в Claude | MCP грузится при старте — перезапусти сессию Claude Code. |
