@@ -1,0 +1,5 @@
+# Секреты Telegram — никогда не коммитить
+.env
+*.env
+!*.env.example
+telegram-data/
